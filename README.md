@@ -9,7 +9,8 @@ Available from the the docker hub regsitry as `grahamgilchrist\rsync`
 ```
 rsync:
   image: grahamgilchrist/rsync/
+  command: rsync
   volumes:
     - ./project:/rsync/contents
 ```
-* `docker-compose run rsync rsync -rv --delete --compress user@domain:/path/to/deploy/ /rsync/contents`
+* `docker-compose run rsync -rv --delete --compress user@domain:/path/to/deploy/ /rsync/contents`
